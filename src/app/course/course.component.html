@@ -1,6 +1,5 @@
-<h2>{{ title }}</h2>
+<h2 [textContent]="title"></h2>
 <ul>
-    <li *ngFor="let course of courses">
-        {{ course }}
-    </li>
+    <li [textContent]="course" *ngFor="let course of courses"></li>
 </ul>
+<button class="btn btn-primary">Save</button>
