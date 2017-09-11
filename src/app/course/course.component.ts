@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
+  isActive = true;
   title = 'List of courses';
   courses;
 
@@ -18,4 +19,7 @@ export class CourseComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSave() {
+    console.log('Button was clicked');
+  }
 }
