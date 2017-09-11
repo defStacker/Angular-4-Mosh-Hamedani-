@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
+  email = 'me@example.com';
   isActive = true;
   title = 'List of courses';
   courses;
@@ -20,11 +21,15 @@ export class CourseComponent implements OnInit {
   }
 
   onDivClicked() {
-    console.log('Div was clicked');
+    console.log('Div was clicked.');
   }
 
   onSave($event ) {
     $event.stopPropagation();
-    console.log('Button was clicked', $event);
+    console.log('Button was clicked.', $event);
+  }
+
+  onKeyUp() {
+    console.log(this.email);
   }
 }
