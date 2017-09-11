@@ -19,7 +19,12 @@ export class CourseComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSave() {
-    console.log('Button was clicked');
+  onDivClicked() {
+    console.log('Div was clicked');
+  }
+
+  onSave($event ) {
+    $event.stopPropagation();
+    console.log('Button was clicked', $event);
   }
 }
