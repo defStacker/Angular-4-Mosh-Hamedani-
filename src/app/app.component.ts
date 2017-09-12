@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  canSave = false;
   viewMode = 'map';
   courses = [];
   title = 'app';
