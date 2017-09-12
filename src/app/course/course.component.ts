@@ -14,7 +14,9 @@ export class CourseComponent implements OnInit {
   courses;
 
   text = `
-  text text loool text text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text 
+  text text loool text text text loool text text loool text text loool text text loool text text loool text text loool text
+  text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool
+  text text loool text text loool text text loool text text loool text text loool text
   `;
 
   constructor(service: CoursesService) {
