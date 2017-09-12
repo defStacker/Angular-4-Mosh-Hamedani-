@@ -13,6 +13,10 @@ export class CourseComponent implements OnInit {
   title = 'List of courses';
   courses;
 
+  text = `
+  text text loool text text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool text 
+  `;
+
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
    }
