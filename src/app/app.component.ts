@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   viewMode = 'map';
-  courses: number[] = [1];
+  courses = [];
   title = 'app';
 
   post = {
@@ -26,5 +26,30 @@ export class AppComponent {
 
   onLikeChanged(eventArgs: LikeChangedEventArgs) {
     console.log('LikeChenged', eventArgs);
+  }
+
+  onAdd() {
+    this.courses.push({id: 4, name: 'course4'});
+  }
+
+  onRemove(course) {
+    const index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
+  }
+
+  onUpdate(course) {
+    course.name = 'Updated!';
+  }
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: 'course1'},
+      { id: 2, name: 'course2'},
+      { id: 3, name: 'course3'},
+    ];
+  }
+
+  trackCourse(intdex, course) {
+    return course ? course.id : undefined;
   }
 }
