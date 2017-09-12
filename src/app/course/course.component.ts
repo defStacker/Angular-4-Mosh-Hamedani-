@@ -13,6 +13,7 @@ export class CourseComponent implements OnInit {
   title = 'List of courses';
   courses;
 
+  inputText: String;
   text = `
   text text loool text text text loool text text loool text text loool text text loool text text loool text text loool text
   text loool text text loool text text loool text text loool text text loool text text loool text text loool text text loool
