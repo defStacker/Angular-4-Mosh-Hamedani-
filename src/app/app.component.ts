@@ -21,6 +21,11 @@ export class AppComponent {
     likeSelected: true
   };
 
+  task = {
+    title: 'Review application',
+    assignee: null
+  };
+
   onFavouriteChanged(eventArgs: FavouriteChangedEventArgs) {
     console.log('FavouriteChanged', eventArgs);
   }
