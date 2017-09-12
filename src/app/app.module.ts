@@ -10,6 +10,7 @@ import { CourseComponent } from './course/course.component';
 import { AuthorComponent } from './author/author.component';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PanelComponent } from './panel/panel.component';
     AuthorComponent,
     SummaryPipe,
     FavouriteComponent,
-    PanelComponent
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+.glyphicon-heart {
+    color: #ccc
+}
+.glyphicon-heart-selected {
+    color: #F03457
+}
+
+div {
+    cursor: pointer;
+}
