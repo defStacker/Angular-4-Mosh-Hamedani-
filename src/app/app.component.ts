@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  viewMode = 'map';
   courses: number[] = [1];
   title = 'app';
 
