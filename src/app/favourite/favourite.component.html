@@ -1,7 +1,9 @@
 <div>
     <span class="glyphicon" 
     (click)="onClick()" 
-    [class.glyphicon-star]="isFavourite"
-    [class.glyphicon-star-empty]="!isFavourite">
+    [ngClass]="{
+        'glyphicon-star': isFavourite,
+        'glyphicon-star-empty': !isFavourite
+    }">
     </span>
 </div>
