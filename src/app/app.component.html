@@ -1,3 +1,14 @@
+<app-zippy title='Title1'>
+    content1 ...
+</app-zippy>
+<app-zippy title='Title2'>
+    content2 ...
+</app-zippy>
+
+
+<br>
+<br>
+
 <app-panel>
     <div class="heading">Heading</div>
     <div class="body">
@@ -32,14 +43,14 @@
 
 <button (click)="loadCourses()">Load courses</button>
 <button (click)="onAdd()">Add</button>
-<ul>
-    <li *ngFor="let course of courses; even as isEven; trackBy: trackCourse">
-         {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
-         <button class="btn" (click)="onRemove(course)">Remove</button>
-         <button (click)="onUpdate(course)">Update</button>
-    </li>
-</ul>
 
+    <div *ngFor="let course of courses; trackBy: trackCourse">
+            <app-zippy title='{{ course.name }}'>
+                    content ... 
+                    <button class="btn" (click)="onRemove(course)">Remove</button>
+                    <button (click)="onUpdate(course)">Update</button>
+            </app-zippy>             
+    </div>
 <br>
 <br>
 <br>
