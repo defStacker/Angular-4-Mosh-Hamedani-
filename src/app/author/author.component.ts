@@ -6,14 +6,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './author.component.html',
   styleUrls: ['./author.component.css']
 })
-export class AuthorComponent implements OnInit {
+export class AuthorComponent {
   authors: string[];
 
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
-  }
-
-  ngOnInit() {
   }
 
 }
