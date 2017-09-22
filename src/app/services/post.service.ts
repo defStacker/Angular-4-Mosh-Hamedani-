@@ -21,7 +21,7 @@ export class PostService {
       ._catch(
         (error: Response) => {
           if (error.status === 400) {
-            return Observable.throw(new BadRequestError());
+            return Observable.throw(new BadRequestError(error.json()));
           }
           return Observable.throw(new AppError(error));
         }

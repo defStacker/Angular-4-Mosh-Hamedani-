@@ -39,7 +39,7 @@ export class PostsComponent implements OnInit {
         },
         (error: AppError) => {
           if (error instanceof BadRequestError) {
-            // this.form.serErros(error.json());
+       //      this.form.serErros(error.originalError);
           } else {
             alert('An unexpected error occured.');
             console.log(error);
