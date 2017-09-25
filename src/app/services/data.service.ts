@@ -14,25 +14,25 @@ export class DataService {
 
   getAll() {
     return this.http.get(this.url)
-        .map(responce => { responce.json(); })
+        .map(responce => responce.json())
         ._catch(this.handleError);
   }
 
   create(resource) {
     return this.http.post(this.url, JSON.stringify(resource))
-        .map(responce => { responce.json(); })
+        .map(responce => responce.json())
         ._catch(this.handleError);
   }
 
   update(resource) {
     return this.http.patch(this.url + '/' + resource.id, JSON.stringify({ isRead: true }))
-        .map(responce => { responce.json(); })
+        .map(responce => responce.json())
         ._catch(this.handleError);
   }
 
   delete(id) {
     return this.http.delete(this.url + '/' + id)
-        .map(responce => { responce.json(); })
+        .map(responce => responce.json())
         ._catch(this.handleError);
   }
 

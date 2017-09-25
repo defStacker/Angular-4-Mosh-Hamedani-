@@ -17,24 +17,24 @@ export class PostsComponent implements OnInit {
 
   ngOnInit() {
     this.service.getAll()
-      .subscribe(posts => { this.posts = posts; });
+      .subscribe(posts =>  this.posts = posts );
   }
 
   createPost(input: HTMLInputElement) {
-    const post = {
-      title: input.value
-    };
+    const post = { title: input.value };
+    this.posts.splice(0, 0, post);
+
     input.value = '';
 
     this.service.create(post)
       .subscribe(
         newPost => {
           post['id'] = newPost.id;
-          this.posts.splice(0, 0, post);
         },
         (error: AppError) => {
+          this.posts.splice(0, 1);
           if (error instanceof BadRequestError) {
-       //      this.form.serErros(error.originalError);
+          // this.form.serErros(error.originalError);
           } else {
             throw error;
           }
@@ -49,13 +49,14 @@ export class PostsComponent implements OnInit {
   }
 
   deletePost(post) {
+    const index = this.posts.indexOf(post);
+    this.posts.splice(index, 1);
+
     this.service.delete(post.id)
       .subscribe(
-       () => {
-         const index = this.posts.indexOf(post);
-         this.posts.splice(index, 1);
-       },
+       null,
        (error: AppError) => {
+         this.posts.splice(index, 0, post);
          if (error instanceof NotFoundError) {
            alert('This post has already been deleted');
          } else {
