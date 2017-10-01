@@ -9,53 +9,53 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  canSave = false;
-  viewMode = 'map';
-  courses = [];
-  title = 'app';
+  // canSave = false;
+  // viewMode = 'map';
+  // courses = [];
+  // title = 'app';
 
-  post = {
-    title: 'Title',
-    isFavourite: true,
-    likeCount: 7,
-    likeSelected: true
-  };
+  // post = {
+  //   title: 'Title',
+  //   isFavourite: true,
+  //   likeCount: 7,
+  //   likeSelected: true
+  // };
 
-  task = {
-    title: 'Review application',
-    assignee: null
-  };
+  // task = {
+  //   title: 'Review application',
+  //   assignee: null
+  // };
 
-  onFavouriteChanged(eventArgs: FavouriteChangedEventArgs) {
-    console.log('FavouriteChanged', eventArgs);
-  }
+  // onFavouriteChanged(eventArgs: FavouriteChangedEventArgs) {
+  //   console.log('FavouriteChanged', eventArgs);
+  // }
 
-  onLikeChanged(eventArgs: LikeChangedEventArgs) {
-    console.log('LikeChenged', eventArgs);
-  }
+  // onLikeChanged(eventArgs: LikeChangedEventArgs) {
+  //   console.log('LikeChenged', eventArgs);
+  // }
 
-  onAdd() {
-    this.courses.push({id: 4, name: 'course4'});
-  }
+  // onAdd() {
+  //   this.courses.push({id: 4, name: 'course4'});
+  // }
 
-  onRemove(course) {
-    const index = this.courses.indexOf(course);
-    this.courses.splice(index, 1);
-  }
+  // onRemove(course) {
+  //   const index = this.courses.indexOf(course);
+  //   this.courses.splice(index, 1);
+  // }
 
-  onUpdate(course) {
-    course.name = 'Updated!';
-  }
+  // onUpdate(course) {
+  //   course.name = 'Updated!';
+  // }
 
-  loadCourses() {
-    this.courses = [
-      { id: 1, name: 'course1'},
-      { id: 2, name: 'course2'},
-      { id: 3, name: 'course3'},
-    ];
-  }
+  // loadCourses() {
+  //   this.courses = [
+  //     { id: 1, name: 'course1'},
+  //     { id: 2, name: 'course2'},
+  //     { id: 3, name: 'course3'},
+  //   ];
+  // }
 
-  trackCourse(intdex, course) {
-    return course ? course.id : undefined;
-  }
+  // trackCourse(intdex, course) {
+  //   return course ? course.id : undefined;
+  // }
 }
